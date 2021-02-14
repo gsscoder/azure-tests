@@ -13,7 +13,7 @@ For now it's available just a test for validating an app registration against a 
 
 Just edit `appregistration_tests_data.json`:
 
-```json
+```yaml
 {
     "production": {
         "authTenantId": "{your_authentication_tenant}",
