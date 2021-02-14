@@ -1,0 +1,11 @@
+{
+    "{your_environment}": {
+        "authTenantId": "{your_authentication_tenant}",
+        "targetSubsciptionId": "{your_target_subscription}",
+        "appRegId": "{your_app_registration_id}",
+        "appRegSecret": "{your_app_registration_secret}",
+        "resGroups": [
+            "{your_resource_group_one}",
+            "{your_resource_group_two}" ]
+    }
+}
