@@ -1,4 +1,4 @@
-# Script version: 0.1.0
+# Script version: 0.1.1
 param (
     [Parameter(Mandatory)] [string] $TestDataPath,
     [Parameter(Mandatory)] [string] $Environment
@@ -24,7 +24,8 @@ Describe 'Production' {
     }
 
     It 'Can read' {
-        $outcome = Get-AzResource -ResourceGroupName $script:TestData.resGroups[0]
+        $outcome = Get-AzResource -ResourceGroupName $script:TestData.resGroups[0] -ErrorAction Ignore
+        $outcome | Should -Not -BeNull
         $outcome.Count | Should -BeGreaterThan 0
     }
 
