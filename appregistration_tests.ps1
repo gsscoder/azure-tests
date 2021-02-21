@@ -1,4 +1,4 @@
-# Script version: 0.1.1
+# Script version: 0.1.3
 param (
     [Parameter(Mandatory)] [string] $TestDataPath,
     [Parameter(Mandatory)] [string] $Environment
@@ -40,12 +40,13 @@ Describe 'Production' {
             $outcome | Should -Not -BeNull -Because "Cannot write to resource group '$resGroup'."
         }
     }
-}
 
-AfterAll {
-    'Attempting test resources removal.' | Out-Highlight
-    foreach ($resource in $script:Resources) {
-        Remove-AzResource -ResourceGroupName $resource.resGroup -ResourceName $resource.resName `
-        -ResourceType 'Microsoft.Web/sites' -Force -ErrorAction Ignore
+    It 'Can delete' {
+        foreach ($resource in $script:Resources) {
+            "Attempting removal: $($resource.resName) ($($resource.resGroup))." | Out-Highlight
+            $outcome = Remove-AzResource -ResourceGroupName $resource.resGroup -ResourceName $resource.resName `
+                -ResourceType 'Microsoft.Web/sites' -Force -ErrorAction Ignore
+            $outcome | Should -BeTrue
+        }
     }
 }

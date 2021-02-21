@@ -60,14 +60,14 @@ Application Secret: mmh*********************************
 
 WARNING: The provided service principal secret will be included in the 'AzureRmContext.json' file found in the user profile ( C:\Users\coder\.Azure ). Please ensure that this directory has appropriate protections.
 WARNING: TenantId 'f81961d8-919a-49f5-977c-10fc8d15ad8d' contains more than one active subscription. First one will be selected for further use. To select another subscription, use Set-AzContext.
-  [+] Can connect 2.34s (2.27s|78ms)
-Setting context to Subscription ID '170cf92d-760c-4921-baec-29748a9753fa'.
-  [+] Can switch subscription 1.86s (1.85s|3ms)
-  [+] Can read 1.78s (1.78s|3ms)
-Attempting creation: testowTerhEYo3N1gQ80qFzS (GROUPONE-Europe-QTA).
-Attempting creation: test3aaeKRveD3hd0aawB8YN (GROUPTWO-Europe-QTA-win).
-  [+] Can write 50.99s (50.98s|6ms)
-Attempting test resources removal.
-Tests completed in 70.18s
-Tests Passed: 4, Failed: 0, Skipped: 0 NotRun: 0
+  [+] Can connect 3.63s (3.56s|77ms)
+Setting context to Subscription ID '61ef86a4-bbfd-425a-a8a0-ab024791e4bd'.
+  [+] Can switch subscription 1.85s (1.84s|3ms)
+  [+] Can read 1.89s (1.87s|27ms)
+Attempting creation: testCKa6XqP0XEJ71FyxxZ3u (INTRANETAI-Europe-DEV-SH).
+  [+] Can write 26.57s (26.56s|1ms)
+Attempting removal: testCKa6XqP0XEJ71FyxxZ3u (INTRANETAI-Europe-DEV-SH).
+  [+] Can delete 4.83s (4.78s|43ms)
+Tests completed in 39.68s
+Tests Passed: 5, Failed: 0, Skipped: 0 NotRun: 0
 ```
